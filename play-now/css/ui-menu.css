@@ -1,0 +1,84 @@
+/*==========================================================*/
+body {
+  height: 100vh;
+  margin: 0;
+  background: black url("https://wallpapercave.com/wp/wp7114934.png");
+  font-family: 'Bai Jamjuree', Calibri, Aria;
+  color: white;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  height: 100vh;
+}
+
+.feature {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature:hover a {
+  opacity: 1;
+}
+
+.feature:hover .feature-img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.feature:hover .content {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transform-origin: left 50%;
+          transform-origin: left 50%;
+}
+
+.feature p {
+  font-size: 2.5rem;
+}
+
+.feature .content {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.feature .feature-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: opacity .3s, -webkit-transform 5s;
+  transition: opacity .3s, -webkit-transform 5s;
+  transition: transform 5s, opacity .3s;
+  transition: transform 5s, opacity .3s, -webkit-transform 5s;
+}
+
+a
+{
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 0.1em 2.5em;
+  font-weight: bold;
+  text-transform:uppercase;
+  font-size: 1.65rem;
+  opacity: 0;
+  transition: opacity .3s;
+}
+/*# sourceMappingURL=ui-menu.css.map */
